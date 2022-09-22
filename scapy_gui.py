@@ -37,7 +37,7 @@ layout = [
             [sg.Text('Statement'),sg.Output(key='statement',size=(50,1)),sg.Cancel("Wanna Cancel",key="cancel")],
             [sg.Text('Results'),sg.Output(key='results',size=(100,15))],
         ]
-window = sg.Window(title='Scapy GUI', layout=layout)
+window = sg.Window(title='Scapy GUI for Beginners', layout=layout)
 
 #====Level1 functions====
 def ping_1way(src,dst): #ping_request
