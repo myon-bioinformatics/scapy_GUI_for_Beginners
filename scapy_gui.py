@@ -161,7 +161,7 @@ while True:
     if event == "syn_3way_ipv4":
         syn_3way(ip_src,ip_dst)
 
-    #[Execute]: Click "IPv4 event"(Level1)
+    #[Execute]: Click "IPv4 event"(Level2)
     if event =="tcp_port_scan":
         tcp_port_scan(ip_src,ip_dst)
     if event == "confirm_ipv4_routes":
