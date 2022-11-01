@@ -19,7 +19,7 @@ Use scapy library in operating GUI(You must install "PySimpleGUI" and "scapy" vi
 
 ・TCP well-known Port Scan
 
-・Confirm　Routes
+・Confirm　 Routes
 
 ・Get MAC address
 
