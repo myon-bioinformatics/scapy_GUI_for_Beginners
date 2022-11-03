@@ -1,13 +1,13 @@
 # scapy_GUI_for_Beginners
 ## Summary
 Use scapy library in operating GUI
-> __Note__ You must install "PySimpleGUI" and "scapy" via pip
 
 ## GUI Image
 ![Test Image 1](GUI_IMAGE.webp)
 
-## Note
-> __Note__ Because of security and Using at beginners's ease, Not include anything to attack like sniffing and spoofing
+## Note/Warning
+> __Note__ You must install "PySimpleGUI" and "scapy" via pip
+> __Warning__ Because of security and Using at beginners's ease, Not include anything to attack like sniffing and spoofing
 
 ## Functions List
 - Ping 1-way
