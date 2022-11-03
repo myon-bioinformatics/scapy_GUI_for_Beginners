@@ -6,7 +6,7 @@ Use scapy library in operating GUI(You must install "PySimpleGUI" and "scapy" vi
 ![Test Image 1](GUI_IMAGE.webp)
 
 ## Note
-[Info]Because of security and Using at beginners's ease, Not include anything to attack like sniffing and spoofing
+> __Note__ Because of security and Using at beginners's ease, Not include anything to attack like sniffing and spoofing
 
 ## Functions List
 - Ping 1-way
@@ -14,7 +14,7 @@ Use scapy library in operating GUI(You must install "PySimpleGUI" and "scapy" vi
 - SYN 1-way
 - SYN 3-way-handshake
 - TCP well-known Port Scan
-- Confirm　 Routes
+- Confirm Routes
 - Get MAC address
 - Xmas Scn
 - IKE Packet
