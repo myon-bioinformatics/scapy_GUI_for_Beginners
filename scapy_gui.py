@@ -1,7 +1,7 @@
 from scapy.all import IP,ICMP,send,sr1,TCP #Use in Level1 Functions
 from scapy.all import sr,conf,getmacbyip #Use in Level2 Functions
 from scapy.all import UDP,ISAKMP,ISAKMP_payload_SA,rdpcap,sendp #Use in Advanced Functions
-import PySimpleGUI as sg #use for GUI creating
+import PySimpleGUI as sg #Use for GUI creating
 import random #Use in Generating Source Port Number
 
 #====Initialize====
