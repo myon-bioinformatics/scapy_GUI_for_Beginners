@@ -1,6 +1,8 @@
-# Scapy L2/L3 Toolkit (v9.3)
+# Scapy L2/L3 Toolkit
 
-A single-window GUI to learn and test L2/L3 networking with Scapy. One place for ICMP/TCP/UDP basics, DNS (UDP/TCP/DoT), ARP scan, traceroute, PCAP sending, a FastAPI+Uvicorn helper server, UDP echo, realtime sniffing, and environment/network info popups.
+A single-window GUI to learn and test L2/L3 networking with Scapy. 
+
+One place for ICMP/TCP/UDP basics, DNS (UDP/TCP/DoT), ARP scan, traceroute, PCAP sending, a FastAPI+Uvicorn helper server, UDP echo, realtime sniffing, and environment/network info popups.
 
 - **GUI**: FreeSimpleGUI (preferred) / PySimpleGUI v4 (fallback)
 - **HTTP helper**: FastAPI + Uvicorn
@@ -13,16 +15,15 @@ A single-window GUI to learn and test L2/L3 networking with Scapy. One place for
 ## Table of Contents
 
 1. [Features](#features)  
-2. [Requirements](#requirements)  
-3. [Installation](#installation)  
-4. [Run](#run)  
-5. [Basic Usage](#basic-usage)  
-6. [HTTP Helper API](#http-helper-api)  
-7. [Popups (Env/Versions & Network)](#popups-envversions--network)  
-8. [Troubleshooting](#troubleshooting)  
-9. [Screenshots](#screenshots)  
-10. [License](#license)  
-11. [Credits](#credits)
+1. [Requirements](#requirements)  
+1. [Installation](#installation)  
+1. [Run](#run)  
+1. [Basic Usage](#basic-usage)   
+1. [Popups (Env/Versions & Network)](#popups-envversions--network)  
+1. [Troubleshooting](#troubleshooting)  
+1. [Screenshots](#screenshots)  
+1. [License](#license)  
+1. [Credits](#credits)
 
 ---
 
@@ -74,79 +75,48 @@ pip install "PySimpleGUI<5"
 ```
 
 ## Run
+
 > python scapy_gui.py
-
 - Top bar: language, ports health (✅/❌), Env/Versions, Network Info buttons.
-
 - A permission warning may appear on launch (raw sockets).
 
 ## Basic Usage
 
 - Local Servers
-
--- Start HTTP: launch FastAPI+Uvicorn (/healthz for reachability)
-
--- Start UDP Echo: launch UDP echo server
-
+  -  Start HTTP: launch FastAPI+Uvicorn (/healthz for reachability)
+  -  Start UDP Echo: launch UDP echo server
 > The Ports: indicator reflects HTTP/UDP status
-
 - Receiver / Realtime
-
 - BPF filter, rolling PCAP, CSV export
-
 - DNS
-
 - Select UDP/TCP/DoT; tweak EDNS/DO/NSID/EDE (subset)
 
 ## Missions
 
-Simple learning checkboxes (e.g., Ping succeeded)
+- Simple learning checkboxes (e.g., Ping succeeded)
+- HTTP Helper API
+- GET /healthz → {"status":"ok"}
+- GET /echo?q=hello → "hello"
+- GET /time → {"now": "YYYY-MM-DDTHH:MM:SSZ"}
+- GET /static/* → served only when docroot is set
 
-HTTP Helper API
+# Popups (Env/Versions & Network)
 
-GET /healthz → {"status":"ok"}
+- Env/Versions
+- Python/OS/OpenSSL, key module versions (Scapy/FastAPI/Uvicorn/…)
+- sys.path, tcpreplay presence, conf.iface, helper server states
+> Note: GUI library (FreeSimpleGUI/PySimpleGUI) versions are not probed to avoid vendor links/popups causing crashes.
+- Network Info
+- Hostname/FQDN, guessed local IPs
+- Scapy IF list, bind candidates, route table, default route
+- nameserver lines from /etc/resolv.conf (Unix-like)
 
-GET /echo?q=hello → "hello"
+## Troubleshooting
 
-GET /time → {"now": "YYYY-MM-DDTHH:MM:SSZ"}
-
-GET /static/* → served only when docroot is set
-
-Popups (Env/Versions & Network)
-
-Env/Versions
-
-Python/OS/OpenSSL, key module versions (Scapy/FastAPI/Uvicorn/…)
-
-sys.path, tcpreplay presence, conf.iface, helper server states
-
-Note: GUI library (FreeSimpleGUI/PySimpleGUI) versions are not probed to avoid vendor links/popups causing crashes.
-
-Network Info
-
-Hostname/FQDN, guessed local IPs
-
-Scapy IF list, bind candidates, route table, default route
-
-nameserver lines from /etc/resolv.conf (Unix-like)
-
-Troubleshooting
-
-GUI won’t start
-
-Ensure FreeSimpleGUI or PySimpleGUI<5 is installed
-
-Permission warning
-
-Re-run with Administrator/root/sudo
-
-HTTP helper shows ❌
-
-Confirm fastapi/uvicorn installed, check port conflicts and local firewall
-
-DoT fails
-
-Verify outbound 853/TCP, and whether TLS interception exists
+- GUI won’t start -> Ensure FreeSimpleGUI or PySimpleGUI<5 is installed
+- Permission warning -> Re-run with Administrator/root/sudo
+- HTTP helper shows ❌ -> Confirm fastapi/uvicorn installed, check port conflicts and local firewall
+- DoT fails -> Verify outbound 853/TCP, and whether TLS interception exists
 
 ## Screenshots
 
@@ -165,4 +135,5 @@ MIT License
 - HTTP: FastAPI / Uvicorn
 
 - Replay: tcpreplay
+
 
