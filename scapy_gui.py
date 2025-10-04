@@ -1,4 +1,4 @@
-# scapy_layer_tools_gui_v9_3.py — L2/L3 Toolkit (v9.3)
+# scapy_layer_tools_gui.py — L2/L3 Toolkit (v2.0,0)
 # - JP/EN UI toggle (top bar, legend, notes, missions title, status/buttons)
 # - Active ports indicator (HTTP/UDP) on the top right
 # - Interface dropdown + bind host dropdown (auto-populated)
@@ -86,7 +86,7 @@ LANG = "JP"  # default
 
 LP = {
     "JP": {
-        "TITLE": "Scapy L2/L3 Toolkit (v9.3)",
+        "TITLE": "Scapy L2/L3 Toolkit (v2.0.0)",
         "ADMIN": "管理者権限",
         "YES": "はい",
         "NO": "いいえ",
@@ -105,7 +105,7 @@ LP = {
         "BTN_NET": "Network Info",
     },
     "EN": {
-        "TITLE": "Scapy L2/L3 Toolkit (v9.3)",
+        "TITLE": "Scapy L2/L3 Toolkit (v2.0.0)",
         "ADMIN": "Admin?",
         "YES": "Yes",
         "NO": "No",
@@ -533,7 +533,7 @@ content_layout = [
 
 layout = [[sg.Column(content_layout, scrollable=True, vertical_scroll_only=True, size=(1100, 760), key='-SCROLL-')]]
 
-window = sg.Window("scapy_layer_tools_gui_v9_3.py", layout, resizable=True, finalize=True)
+window = sg.Window("scapy_gui.py", layout, resizable=True, finalize=True)
 stop_flag = threading.Event()
 _last_sniff = []  # snapshot
 _live_writer = None  # type: Optional[PcapWriter]
@@ -1322,7 +1322,7 @@ def export_csv(path_str: str) -> None:
 #  HTTP Server (FastAPI + Uvicorn)
 # =========================
 def _make_app(doc_root: Optional[str]) -> "FastAPI":
-    app = FastAPI(title="Scapy L2/L3 Toolkit helper", version="9.3")
+    app = FastAPI(title="Scapy L2/L3 Toolkit helper", version="2.0.0")
 
     @app.get("/healthz")
     def healthz():
