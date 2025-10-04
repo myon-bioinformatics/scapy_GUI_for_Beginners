@@ -100,7 +100,7 @@ pip install "PySimpleGUI<5"
 - GET /time → {"now": "YYYY-MM-DDTHH:MM:SSZ"}
 - GET /static/* → served only when docroot is set
 
-# Popups (Env/Versions & Network)
+## Popups (Env/Versions & Network)
 
 - Env/Versions
 - Python/OS/OpenSSL, key module versions (Scapy/FastAPI/Uvicorn/…)
@@ -135,5 +135,6 @@ MIT License
 - HTTP: FastAPI / Uvicorn
 
 - Replay: tcpreplay
+
 
 
