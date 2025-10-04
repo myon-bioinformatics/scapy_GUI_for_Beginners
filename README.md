@@ -71,34 +71,34 @@ pip install FreeSimpleGUI scapy fastapi uvicorn
 # Fallback if FreeSimpleGUI is unavailable
 pip install "PySimpleGUI<5"
 # PySimpleGUI v5 is not supported (the app targets v4 API).
+```
 
-Run
-python scapy_gui.py
+## Run
+> python scapy_gui.py
 
+- Top bar: language, ports health (✅/❌), Env/Versions, Network Info buttons.
 
-Top bar: language, ports health (✅/❌), Env/Versions, Network Info buttons.
+- A permission warning may appear on launch (raw sockets).
 
-A permission warning may appear on launch (raw sockets).
+## Basic Usage
 
-Basic Usage
+- Local Servers
 
-Local Servers
+-- Start HTTP: launch FastAPI+Uvicorn (/healthz for reachability)
 
-Start HTTP: launch FastAPI+Uvicorn (/healthz for reachability)
+-- Start UDP Echo: launch UDP echo server
 
-Start UDP Echo: launch UDP echo server
+> The Ports: indicator reflects HTTP/UDP status
 
-The Ports: indicator reflects HTTP/UDP status
+- Receiver / Realtime
 
-Receiver / Realtime
+- BPF filter, rolling PCAP, CSV export
 
-BPF filter, rolling PCAP, CSV export
+- DNS
 
-DNS
+- Select UDP/TCP/DoT; tweak EDNS/DO/NSID/EDE (subset)
 
-Select UDP/TCP/DoT; tweak EDNS/DO/NSID/EDE (subset)
-
-Missions
+## Missions
 
 Simple learning checkboxes (e.g., Ping succeeded)
 
@@ -148,20 +148,21 @@ DoT fails
 
 Verify outbound 853/TCP, and whether TLS interception exists
 
-Screenshots
+## Screenshots
 
 See README.screenshots.md and place captures under ./screenshots/*.png.
 
-License
+## License
 
-(e.g., MIT License)
+MIT License
 
-Credits
+## Credits
 
-GUI: FreeSimpleGUI / PySimpleGUI
+- GUI: FreeSimpleGUI / PySimpleGUI
 
-Networking: Scapy
+- Networking: Scapy
 
-HTTP: FastAPI / Uvicorn
+- HTTP: FastAPI / Uvicorn
 
-Replay: tcpreplay
+- Replay: tcpreplay
+
