@@ -91,10 +91,11 @@ pip install "PySimpleGUI<5"
 - DNS
 - Select UDP/TCP/DoT; tweak EDNS/DO/NSID/EDE (subset)
 
-## Missions
+### Missions
 
 - Simple learning checkboxes (e.g., Ping succeeded)
-- HTTP Helper API
+
+### HTTP Helper API
 - GET /healthz → {"status":"ok"}
 - GET /echo?q=hello → "hello"
 - GET /time → {"now": "YYYY-MM-DDTHH:MM:SSZ"}
@@ -135,6 +136,7 @@ MIT License
 - HTTP: FastAPI / Uvicorn
 
 - Replay: tcpreplay
+
 
 
 
