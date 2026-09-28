@@ -1,5 +1,13 @@
 # Scapy L2/L3 Toolkit
 
+> [!IMPORTANT]
+> **Archived / no longer actively maintained.**
+>
+> This repository is preserved as a historical standalone Scapy GUI/networking toolkit. Repository-wide search found no implementation dependency from the owner's other repositories, so it is not maintained as a shared module. No further feature, dependency, protocol, GUI-backend, or CI maintenance is planned.
+>
+> The existing documentation below is retained because it describes the preserved implementation and its operational/safety constraints.
+
+
 A single-window GUI to learn and test L2/L3 networking with Scapy. 
 
 One place for ICMP/TCP/UDP basics, DNS (UDP/TCP/DoT), ARP scan, traceroute, PCAP sending, a FastAPI+Uvicorn helper server, UDP echo, realtime sniffing, and environment/network info popups.
